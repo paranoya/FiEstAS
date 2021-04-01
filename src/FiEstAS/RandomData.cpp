@@ -36,7 +36,7 @@ double Ring(double* x, int D)
 //----------------------------------------------------------------------
 double Hernquist(double* xx, int D)
 // Generate a 3D Hernquist sphere with a=1,
-// centered at (0,.75,0) and clipped by [-.5,1].
+// centered at (0,0,0) and clipped by [-50,50].
 // TO DO: If D>=6, generate also velocities in units
 //        of GM/a=1, clipped by [-1,1].
 // Any extra dimensions are set to uniform [0,1].
@@ -60,7 +60,7 @@ double Hernquist(double* xx, int D)
   xx[0]=x; xx[1]=y; xx[2]=z;
   for(int d=3;d<D;d++) xx[d] = drand48();
   
-  if(x<-.5 || x>1. || y<-.5 || y>1. || z<-.5 || z>1.) return(0.);
+  if(x<-50 || x>50 || y<-50 || y>50 || z<-50 || z>50) return(0.);
   else return( 1./2./M_PI/r/pow(1.+r,3.) );
 }
 
@@ -112,9 +112,9 @@ int main(int argc,char** argv)
   else
     if(strncmp(argv[2],"Hernquist",5)==0)
       {
-	if(D<3)
+	if(D != 3)
 	  {
-	    printf("\aERROR: D must be >=3 for this distribution\n");
+	    printf("\aERROR: D must be 3 for this distribution\n");
 	    return(-1);
 	  }
 	else dist = Hernquist;
