@@ -55,8 +55,8 @@ int yASCII_data::read(const char *name)
   sig = new double[Ncolumns];
   for(int c=0; c<Ncolumns; c++)
     {
-      max[c] = -HUGE;
-      min[c] =  HUGE;
+      max[c] = -yHUGE;
+      min[c] =  yHUGE;
       ave[c] = 0.;
       sig[c] = 0.;
     }

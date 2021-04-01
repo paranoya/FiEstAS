@@ -49,7 +49,7 @@ void plot_map(float* data, int size)
   for(int i=0; i<size2; i++ ) mass[i] = ( m += intensity[i] );
   for(int i=0; i<size2; i++ ) mass[i] /= m;
 
-  double mean=0., sigma=0., min=HUGE, max=-HUGE;
+  double mean=0., sigma=0., min=yHUGE, max=-yHUGE;
   for(int i=0; i<size2; i++ )
     {
       double x = data[i];
