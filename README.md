@@ -18,7 +18,8 @@ The code has not been properly tested or documented, but it should successfully 
 Please feel free to contact me for any help in using the code.
 Any comments, suggestions, and/or (most importantly) bug reports are also welcome.
 
- Have fun :^)
+ Have fun,
 
   Yago
 
+                                                                          ...Paranoy@ Rulz! ;^D
